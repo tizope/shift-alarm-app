@@ -3,29 +3,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center">
+    android:padding="16dp"
+    android:background="#F5F6F8">
 
+    <!-- 상단 타이틀 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="근무 알람 설정"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:timePickerMode="spinner" />
-
-    <Button
-        android:id="@+id/btnSetAlarm"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="백그라운드 시스템 알람 등록"
+        android:layout_height="wrap_content"
+        android:text="근무 교대 및 알람 관리"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <!-- 캘린더 뷰 -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 선택된 날짜 및 설정 상태 표시 -->
+    <TextView
+        android:id="@+id/selectedDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="날짜를 선택하세요"
         android:textSize="16sp"
-        android:layout_marginTop="20dp" />
+        android:textColor="#555555"
+        android:paddingBottom="8dp" />
+
+    <!-- 시간/색상 설정 안내 박스 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[근무 및 알람 설정]"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#222222"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• 설정된 시간에 백그라운드 알람이 작동합니다."
+            android:textSize="13sp"
+            android:textColor="#666666" />
+    </LinearLayout>
 
 </LinearLayout>
